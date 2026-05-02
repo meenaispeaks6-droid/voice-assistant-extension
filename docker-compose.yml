@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "7860:7860"
+    environment:
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - PORT=7860
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    command: bun server.js
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_BACKEND_WS_URL=ws://localhost:7860
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    command: bun run dev --host
+    depends_on:
+      - backend
+    restart: unless-stopped

@@ -1,0 +1,12 @@
+{
+  "name": "ai-voice-browser-automation",
+  "version": "1.0.0",
+  "description": "AI-powered browser automation with voice control",
+  "scripts": {
+    "dev": "concurrently \"cd backend && bun start\" \"cd frontend && bun dev\"",
+    "install:all": "cd backend && bun install && cd ../frontend && bun install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

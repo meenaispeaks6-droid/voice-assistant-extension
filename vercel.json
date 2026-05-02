@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "name": "ai-voice-browser-automation",
+  "builds": [
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/frontend/dist/$1"
+    }
+  ],
+  "env": {
+    "VITE_BACKEND_WS_URL": "wss://your-backend-url-here"
+  },
+  "github": {
+    "autoDeploy": true
+  }
+}
