@@ -1,6 +1,6 @@
-# 🎙️ AI Voice Browser Automation
+# 🎙️ Jarvis — AI Voice Browser Automation
 
-A full-stack AI-powered browser automation app with voice control. Control your browser using natural language commands powered by OpenRouter AI.
+A full-stack AI-powered browser automation app with voice control. Talk to your browser in natural language — Jarvis understands and acts, powered by OpenRouter AI.
 
 ## ✨ Features
 
@@ -256,3 +256,4 @@ Feel free to open issues or PRs to improve the project!
 ---
 
 Built with ❤️ using React, Node.js, and AI
+
